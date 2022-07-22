@@ -1,0 +1,16 @@
+#checkout_body {
+  display: grid;
+  place-items: center;
+}
+
+#checkout_container {
+  display: grid;
+  align-items: center;
+  justify-items: start;
+  text-align: center;
+  background-color: lightcyan;
+}
+#checkout_container > img {
+  width: 70%;
+  height: 90%;
+}/*# sourceMappingURL=checkout.css.map */

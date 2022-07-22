@@ -1,0 +1,21 @@
+#checkout_body{
+    display: grid;
+    place-items: center;
+}
+
+#checkout_container{
+    display: grid;
+   align-items: center;
+   justify-items: start;
+    text-align: center;
+
+    background-color: lightcyan;
+
+ 
+
+
+    >img{
+        width: 70%;
+        height: 90%;
+    }
+}

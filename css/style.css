@@ -1,0 +1,21 @@
+body {
+  width: 100%;
+}
+
+#item_section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.item_container {
+  display: grid;
+  grid-template-rows: auto auto 65px 15px;
+  place-items: center;
+  text-align: center;
+  border: black solid;
+  border-radius: 70px;
+}
+.item_container > button {
+  margin: 10px;
+}/*# sourceMappingURL=style.css.map */
