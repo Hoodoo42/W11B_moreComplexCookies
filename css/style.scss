@@ -1,29 +1,25 @@
-body{
-
-    width: 100%;
+body {
+  min-height: 100vh;
+  width: 100%;
 }
 
+#item_section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
-#item_section{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: 10px;
-
-
+  gap: 10px;
 }
 
-.item_container{
-    display: grid;
-    grid-template-rows: auto auto 65px 15px;
-    place-items: center;
-    text-align: center;
+.item_container {
+  display: grid;
+  grid-template-rows: auto auto 65px 15px;
+  place-items: center;
+  text-align: center;
 
-    border: black solid;
-    border-radius: 70px;
+  border: black solid;
+  border-radius: 70px;
 
-    >button{
-        margin: 10px;
-    }
-
+  > button {
+    margin: 10px;
+  }
 }

@@ -1,34 +1,80 @@
+let checkout = [];
+
 function showRed(details) {
   let red = {
+    type: `cloud`,
     colour: `Red`,
     imgUrl: `images/red.png`,
-    price: 23
+    price: 23,
   };
-  let redJson = JSON.stringify(red);
-  Cookies.set(`selection`, redJson);
-  location.href = `checkout.html`;
+  // let redJson = JSON.stringify(red);
+  // Cookies.set(`selection`, redJson);
+
+  checkout.push(red);
+  let checkoutJson = JSON.stringify(checkout);
+  Cookies.set(`checkoutCookie`, checkoutJson);
+
+  // when the following code is on, it doesnt count up on clicks
+
+  // // Cookies.set(`cartClick`, 0);
+  // // if (Cookies.get(`cartClick`) === undefined) {
+  // //   Cookies.set(`cartClick`, 0);
+  // }
+  // debugger says currentItems: NaN... but its should be?
+  let currentItems = parseInt(Cookies.get(`cartClick`));
+  currentItems++;
+
+  Cookies.set(`cartClick`, currentItems);
 }
 
 function showYellow(details) {
   let yellow = {
+    type: `cloud`,
     colour: `Yellow`,
-    imgUrl: `/Users/colleen/Desktop/Innotech/Assignments/week11/W11B_moreComplexCookies/images/yellow.png`,
+    imgUrl: `images/yellow.png`,
     description: `The third colour of the rainbow!`,
   };
-  let yellowJson = JSON.stringify(yellow);
-  Cookies.set(`selection`, yellowJson);
-  location.href = `checkout.html`;
+  // let yellowJson = JSON.stringify(yellow);
+  // Cookies.set(`selection`, yellowJson);
+
+  checkout.push(yellow);
+  let checkoutJson = JSON.stringify(checkout);
+  Cookies.set(`checkoutCookie`, checkoutJson);
+
+  // Cookies.set(`cartClick`, 0);
+  // if (Cookies.get(`cartClick`) === undefined) {
+  //   Cookies.set(`cartClick`, 0);
+  // }
+  // debugger says currentItems: NaN... but its should be?
+  let currentItems = parseInt(Cookies.get(`cartClick`));
+  currentItems++;
+
+  Cookies.set(`cartClick`, currentItems);
 }
 
 function showBlue(details) {
   let blue = {
+    type: `cloud`,
     colour: `Blue`,
-    imgUrl: `/Users/colleen/Desktop/Innotech/Assignments/week11/W11B_moreComplexCookies/images/teal.png`,
+    imgUrl: `images/teal.png`,
     description: `The fourth colour of the rainbow!`,
   };
-  let blueJson = JSON.stringify(blue);
-  Cookies.set(`selection`, blueJson);
-  location.href = `checkout.html`;
+  // let blueJson = JSON.stringify(blue);
+  // Cookies.set(`selection`, blueJson);
+
+  checkout.push(blue);
+  let checkoutJson = JSON.stringify(checkout);
+  Cookies.set(`checkoutCookie`, checkoutJson);
+
+  // Cookies.set(`cartClick`, 0);
+  // if (Cookies.get(`cartClick`) === undefined) {
+  //   Cookies.set(`cartClick`, 0);
+  // }
+  // debugger says currentItems: NaN... but its should be?
+  let currentItems = parseInt(Cookies.get(`cartClick`));
+  currentItems++;
+
+  Cookies.set(`cartClick`, currentItems);
 }
 
 let redButton = document.getElementById("red_button");
