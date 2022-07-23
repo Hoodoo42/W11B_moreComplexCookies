@@ -1,30 +1,24 @@
+
+// creating a variable to hold the array of object (items being added to cart)
 let checkout = [];
 
+
+// all functions will create on object describe which item was clicked on
 function showRed(details) {
   let red = {
     type: `cloud`,
     colour: `Red`,
     imgUrl: `images/red.png`,
+    description: `The first colour of the rainbow!`,
     price: 23,
   };
-  // let redJson = JSON.stringify(red);
-  // Cookies.set(`selection`, redJson);
 
+  // checkout.push will add the object to the checkout array
+  // the array is turned into a string
+  // and saved into a cookie
   checkout.push(red);
   let checkoutJson = JSON.stringify(checkout);
   Cookies.set(`checkoutCookie`, checkoutJson);
-
-  // when the following code is on, it doesnt count up on clicks
-
-  // // Cookies.set(`cartClick`, 0);
-  // // if (Cookies.get(`cartClick`) === undefined) {
-  // //   Cookies.set(`cartClick`, 0);
-  // }
-  // debugger says currentItems: NaN... but its should be?
-  let currentItems = parseInt(Cookies.get(`cartClick`));
-  currentItems++;
-
-  Cookies.set(`cartClick`, currentItems);
 }
 
 function showYellow(details) {
@@ -33,23 +27,12 @@ function showYellow(details) {
     colour: `Yellow`,
     imgUrl: `images/yellow.png`,
     description: `The third colour of the rainbow!`,
+    price: 42,
   };
-  // let yellowJson = JSON.stringify(yellow);
-  // Cookies.set(`selection`, yellowJson);
 
   checkout.push(yellow);
   let checkoutJson = JSON.stringify(checkout);
   Cookies.set(`checkoutCookie`, checkoutJson);
-
-  // Cookies.set(`cartClick`, 0);
-  // if (Cookies.get(`cartClick`) === undefined) {
-  //   Cookies.set(`cartClick`, 0);
-  // }
-  // debugger says currentItems: NaN... but its should be?
-  let currentItems = parseInt(Cookies.get(`cartClick`));
-  currentItems++;
-
-  Cookies.set(`cartClick`, currentItems);
 }
 
 function showBlue(details) {
@@ -58,23 +41,12 @@ function showBlue(details) {
     colour: `Blue`,
     imgUrl: `images/teal.png`,
     description: `The fourth colour of the rainbow!`,
+    price: 25,
   };
-  // let blueJson = JSON.stringify(blue);
-  // Cookies.set(`selection`, blueJson);
 
   checkout.push(blue);
   let checkoutJson = JSON.stringify(checkout);
   Cookies.set(`checkoutCookie`, checkoutJson);
-
-  // Cookies.set(`cartClick`, 0);
-  // if (Cookies.get(`cartClick`) === undefined) {
-  //   Cookies.set(`cartClick`, 0);
-  // }
-  // debugger says currentItems: NaN... but its should be?
-  let currentItems = parseInt(Cookies.get(`cartClick`));
-  currentItems++;
-
-  Cookies.set(`cartClick`, currentItems);
 }
 
 let redButton = document.getElementById("red_button");
